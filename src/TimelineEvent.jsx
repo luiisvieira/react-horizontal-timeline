@@ -13,9 +13,9 @@ const styles = {
   },
   icon: {
     position: 'absolute',
-    top: 16,
-    left: 92.5,
-    fontSize: 40,
+    top: 35,
+    left: 67,
+    fontSize: 30,
     color: '#fff'
   },
   iconSimple: {
@@ -64,6 +64,9 @@ const styles = {
   textContainer: {
     marginTop: -40,
     textAlign: 'center'
+  },
+  textH: {
+    fontSize: '1.1rem !important'
   },
   actionContainer: {
     margin: '16px auto',
@@ -175,7 +178,7 @@ const TimelineEvent = ({
         <Grid className={classes.container}>
           <Fragment>
             {Icon && <Icon className={classes.icon} />}
-            <svg width={225} height={187} viewBox='0 0 59.531 49.477'>
+            <svg width={160} height={187} viewBox='0 0 59.531 49.477'>
               <g transform='matrix(.99959 0 0 .99838 -100.96 -38.57)'>
                 <path
                   d='M101.002 69.656h55.492l4.064 4.158-4.064 4.205h-55.492l3.85-4.205z'
@@ -209,7 +212,7 @@ const TimelineEvent = ({
             </svg>
             <Grid className={classes.textContainer}>
               {typeof title === 'string' ? (
-                <Typography variant='h6' {...titleProps}>
+                <Typography variant='h6' className={classes.textH} {...titleProps}>
                   {title}
                 </Typography>
               ) : (
